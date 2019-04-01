@@ -30,7 +30,7 @@ $(document).ready(function() {
         return (upper.toUpperCase());
         // return $("#display" + (upper.toUpperCase()));
     });
-    $("#display").text(array3);
+    $("#display").text((array3).sort());
     console.log(array3);
 
     array3.push(array1[0]);
