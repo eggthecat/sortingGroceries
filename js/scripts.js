@@ -1,26 +1,19 @@
 $(document).ready(function() {
-  $("#things form").submit(function(event) {
-    var list = ["dairy", "meat", "veggies"];
+  $("#questions").submit(function(event){
+    var things1Input = $("#things1").val();
+    var things2Input = $("#things2").val();
+    var things3Input = $("#things3").val();
 
-//
-//     things.forEach(function(thing) {
-//       var userInput = $("input#" + thing).val();
-//       $("." + thing).text(userInput);
-//     });
-//
-//     $("#story").show();
-//     console.log(userInput);
-//     event.preventDefault();
-//   });
-// });
+    var array1 = [things1Input, things2Input, things3Input];
 
-
-
-    var dairy = $('#dairy').val();
-    var meat = $('#meat').val();
-    var veggies = $('#veggies').val();
-    var array1 = [dairy, meat, veggies];
-
+    $("#answerArea").show();
+    $("#display").text(array1);
     event.preventDefault();
+
+    var array2 = [];
+    array2.push(array1[0], array1[1], array1[2]);
+    $("#elementZero").text("We also love " + array2[0]);
+    $("#elementOne").text("We also love " + array2[1]);
+    $("#elementTwo").text("We also love " + array2[2]);
   });
 });
